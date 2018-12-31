@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lobster" type="text/css">
     </head>
     <body>
+        {% if user.is_authenticated %}
+            <a href="{% url 'post_new' %}" class="top-menu"><span>add</span></a>
+        {% endif %}
         <div class="page-header">
             <h1><a href="/">Django Blog</a></h1>
         </div>
